@@ -6,16 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input id="search-bar" type="text">
-    <button id="search-btn">search</button>
-
-    <h1 id="city-name">xd</h1>
-    <h2 id="temp">20°</h2>
-
-    
+    <div id="main-pannel">
+        <img id="background" src="/images/landscape.jpg" alt="">
+        <div id="content">
+            <div id="main-content-pannel">
+                <div id="country-main">
+                    <div id="weather-main">
+                        <span class="text" id="city-info">Scattered clouds</span>
+                        <span class="text" id="city-name">Mar del Plata</span>
+                        <span class="text" id="city-day">Tuesday, 10th Jan '23</span>
+                        <span class="text" id="city-hour">12:24pm</span>
+                        <span class="text" id="temp">20°</span>
+                        <span class="text" id="change-temp">Display °C | °F</span>
+                        <span id="weather-icon" class="material-symbols-outlined">sunny</span>
+                    </div>
+                    <div id="search-box">
+                        <input id="search-bar" type="text" placeholder="Search">
+                        <span id="search-btn" class="material-symbols-outlined">search</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
