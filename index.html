@@ -14,22 +14,63 @@
 </head>
 <body>
     <div id="main-pannel">
-        <img id="background" src="/images/landscape.jpg" alt="">
+        <img id="background" src="https://facumeniy.github.io/weather-app/images/landscape.jpg" alt="">
         <div id="content">
             <div id="main-content-pannel">
-                <div id="country-main">
+                <div class="pannel">
                     <div id="weather-main">
-                        <span class="text" id="city-info">Scattered clouds</span>
-                        <span class="text" id="city-name">Mar del Plata</span>
-                        <span class="text" id="city-day">Tuesday, 10th Jan '23</span>
-                        <span class="text" id="city-hour">12:24pm</span>
-                        <span class="text" id="temp">20°</span>
+                        <span class="text" id="city-info"></span>
+                        <span class="text" id="city-name"></span>
+                        <span class="text" id="city-day"></span>
+                        <span class="text" id="city-hour"></span>
+                        <span class="text" id="temp"></span>
                         <span class="text" id="change-temp">Display °C | °F</span>
-                        <span id="weather-icon" class="material-symbols-outlined">sunny</span>
+                        <span id="weather-icon" class="material-symbols-outlined"></span>
                     </div>
                     <div id="search-box">
                         <input id="search-bar" type="text" placeholder="Search">
                         <span id="search-btn" class="material-symbols-outlined">search</span>
+                    </div>
+                </div>
+                <div class="pannel">
+                    <div class="pannel-info">
+                        <div class="pannel-icon">
+                            <span class="material-symbols-outlined icon">device_thermostat</span>
+                        </div>
+                        <div class="pannel-text">
+                            <div class="info-description text">Feels like</div>
+                            <div class="info-value text">20°</div>
+                        </div>
+                    </div>
+
+                    <div class="pannel-info">
+                        <div class="pannel-icon">
+                            <span class="material-symbols-outlined icon">humidity_low</span>
+                        </div>
+                        <div class="pannel-text">
+                            <div class="info-description text">Humidity</div>
+                            <div class="info-value text">70%</div>
+                        </div>
+                    </div>
+
+                    <div class="pannel-info">
+                        <div class="pannel-icon">
+                            <span class="material-symbols-outlined icon">device_thermostat</span>
+                        </div>
+                        <div class="pannel-text">
+                            <div class="info-description text">Feels Like</div>
+                            <div class="info-value text">20°</div>
+                        </div>
+                    </div>
+
+                    <div class="pannel-info">
+                        <div class="pannel-icon">
+                            <span class="material-symbols-outlined icon">air</span>
+                        </div>
+                        <div class="pannel-text">
+                            <div class="info-description text">Wind speed</div>
+                            <div class="info-value text">10km/h</div>
+                        </div>
                     </div>
                 </div>
             </div>
