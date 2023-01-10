@@ -46,15 +46,15 @@ body{
     display: flex;
     justify-content: space-between;
 }
-#right-pannel{
+#left-pannel{
     height: 100%;
-    min-width: 320px;
-    width: 320px;
+    min-width: 400px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-#left-pannel{
+#right-pannel{
     height: 100%;
     width: 200px;
     min-width: 200px;

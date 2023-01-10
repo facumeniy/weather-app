@@ -116,7 +116,11 @@ function updateCity(city){
             weatherIcon.innerText = "rainy";
             backgroundImg.src = "https://facumeniy.github.io/weather-app/images/rainy-landscape.jpg";
         }else if(weatherDescription.includes('snow')){
-            weatherIcon.innerText = "https://facumeniy.github.io/weather-app/images/snowy-landscape.jpg";
+            weatherIcon.innerText = "weather_snowy";
+            backgroundImg.src = "https://facumeniy.github.io/weather-app/images/snowy-landscape.jpg";
+        }else if(weatherDescription.includes('mist')){
+            weatherIcon.innerText = "cloud";
+            backgroundImg.src = "https://facumeniy.github.io/weather-app/images/misty-landscape.jpg";
         }
 
         let nextDay = (new Date().getDay() + 1);
