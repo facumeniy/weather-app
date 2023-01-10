@@ -17,14 +17,14 @@
         <img id="background" src="https://facumeniy.github.io/weather-app/images/landscape.jpg" alt="">
         <div id="content">
             <div id="main-content-pannel">
-                <div class="pannel">
+                <div id="right-pannel">
                     <div id="weather-main">
                         <span class="text" id="city-info"></span>
                         <span class="text" id="city-name"></span>
                         <span class="text" id="city-day"></span>
                         <span class="text" id="city-hour"></span>
                         <span class="text" id="temp"></span>
-                        <span class="text" id="change-temp">Display °C | °F</span>
+                        <span class="text" id="change-temp">Display <span id="celsius">°C</span> | <span id="fahrenheit">°F</span></span>
                         <span id="weather-icon" class="material-symbols-outlined"></span>
                     </div>
                     <div id="search-box">
@@ -32,14 +32,14 @@
                         <span id="search-btn" class="material-symbols-outlined">search</span>
                     </div>
                 </div>
-                <div class="pannel">
+                <div id="left-pannel">
                     <div class="pannel-info">
                         <div class="pannel-icon">
                             <span class="material-symbols-outlined icon">device_thermostat</span>
                         </div>
                         <div class="pannel-text">
                             <div class="info-description text">Feels like</div>
-                            <div class="info-value text">20°</div>
+                            <div id="feels-like" class="info-value text">20°</div>
                         </div>
                     </div>
 
@@ -49,17 +49,7 @@
                         </div>
                         <div class="pannel-text">
                             <div class="info-description text">Humidity</div>
-                            <div class="info-value text">70%</div>
-                        </div>
-                    </div>
-
-                    <div class="pannel-info">
-                        <div class="pannel-icon">
-                            <span class="material-symbols-outlined icon">device_thermostat</span>
-                        </div>
-                        <div class="pannel-text">
-                            <div class="info-description text">Feels Like</div>
-                            <div class="info-value text">20°</div>
+                            <div id="city-humidity" class="info-value text">70%</div>
                         </div>
                     </div>
 
@@ -69,7 +59,52 @@
                         </div>
                         <div class="pannel-text">
                             <div class="info-description text">Wind speed</div>
-                            <div class="info-value text">10km/h</div>
+                            <div id="wind-speed" class="info-value text">10km/h</div>
+                        </div>
+                    </div>
+
+                    <div class="pannel-info">
+                        <!-- rain probability -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-pannel">
+                <div class="week-text">Weather for the next 5 days</div>
+                <div class="days-container">
+                    <div class="weekday">
+                        <div id="first-day" class="day-name">Monday</div>
+                        <div id="first-temp" class="day-temp">20°</div>
+                        <div class="day-icon">
+                            <span class="material-symbols-outlined icon">cloud</span>
+                        </div>
+                    </div>
+                    <div class="weekday">
+                        <div id="second-day" class="day-name">Monday</div>
+                        <div id="second-temp" class="day-temp">20°</div>
+                        <div class="day-icon">
+                            <span class="material-symbols-outlined icon">cloud</span>
+                        </div>
+                    </div>
+                    <div class="weekday">
+                        <div id="third-day" class="day-name">Monday</div>
+                        <div id="third-temp" class="day-temp">20°</div>
+                        <div class="day-icon">
+                            <span class="material-symbols-outlined icon">cloud</span>
+                        </div>
+                    </div>
+                    <div class="weekday">
+                        <div id="fourth-day" class="day-name">Monday</div>
+                        <div id="fourth-temp" class="day-temp">20°</div>
+                        <div class="day-icon">
+                            <span class="material-symbols-outlined icon">cloud</span>
+                        </div>
+                    </div>
+                    <div class="weekday">
+                        <div id="fifth-day" class="day-name">Monday</div>
+                        <div id="fifth-temp" class="day-temp">20°</div>
+                        <div class="day-icon">
+                            <span class="material-symbols-outlined icon">cloud</span>
                         </div>
                     </div>
                 </div>
