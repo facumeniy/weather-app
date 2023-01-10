@@ -27,7 +27,13 @@ const thirdTemp = document.getElementById('third-temp');
 const fourthTemp = document.getElementById('fourth-temp');
 const fifthTemp = document.getElementById('fifth-temp');
 
+const firstIcon = document.getElementById('first-icon');
+const secondIcon = document.getElementById('second-icon');
+const thirdIcon = document.getElementById('third-icon');
+const fourthIcon = document.getElementById('fourth-icon');
+const fifthIcon = document.getElementById('fifth-icon');
 
+// GLOBACL VARIABLES
 let day = "";
 // FUNCTIONS
 async function getCityInfo(city){
@@ -86,6 +92,9 @@ function capitalizeFirstLetter(string) {
 
 function updateCity(city){
     city.then(city => {
+        let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        let week = [];
+
         cityInfo.innerText = capitalizeFirstLetter(city.description);
         cityName.innerText = city.name;
         cityTemp.innerText = city.celsiusTemp;
@@ -103,8 +112,23 @@ function updateCity(city){
         }else if(weatherDescription.includes('snow')){
             weatherIcon.innerText = "weather_snowy";
         }
+
+        let nextDay = (new Date().getDay() + 1);
+        week = [];
+
+        for (let i = 0; i < 6; i++) {
+            const dayIndex = (nextDay + i) % 7;
+            week.push((days[dayIndex]));
+        }
+
+        firstDay.innerHTML = week[0];
+        secondDay.innerHTML = week[1];
+        thirdDay.innerHTML = week[2];
+        fourthDay.innerHTML = week[3];
+        fifthDay.innerHTML = week[4];
+
         // DAY IN COUNTRY
-        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         const date = new Date();
         let dayOfMonth = parseInt(date.getDate());
@@ -122,7 +146,7 @@ function updateCity(city){
 
             const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
             let nextDay = (new Date().getDay() + 1);
-            const week = [];
+            week = [];
 
             for (let i = 0; i < 6; i++) {
                 const dayIndex = (nextDay + i) % 7;
@@ -150,26 +174,71 @@ function updateCity(city){
 
 function updateForecast(city){
     city.then(city => {
-        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        let nextDay = (new Date().getDay() + 1);
-        const week = [];
-
-        for (let i = 0; i < 6; i++) {
-            const dayIndex = (nextDay + i) % 7;
-            week.push((days[dayIndex]));
-        }
-
-        firstDay.innerHTML = week[0];
-        secondDay.innerHTML = week[1];
-        thirdDay.innerHTML = week[2];
-        fourthDay.innerHTML = week[3];
-        fifthDay.innerHTML = week[4];
-
         firstTemp.innerHTML = city.oneCel;
         secondTemp.innerHTML = city.twoCel;
         thirdTemp.innerHTML = city.threeCel;
         fourthTemp.innerHTML = city.fourCel;
         fifthTemp.innerHTML = city.fiveCel;
+
+        if(city.oneWeather.includes('clouds')){
+            firstIcon.innerText = "cloud";
+        }else if(city.oneWeather.includes('clear')){
+            firstIcon.innerText = "sunny";
+        }else if(city.oneWeather.includes('rain')){
+            firstIcon.innerText = "rainy";
+        }else if(city.oneWeather.includes('drizzle')){
+            firstIcon.innerText = "rainy";
+        }else if(city.oneWeather.includes('snow')){
+            firstIcon.innerText = "weather_snowy";
+        }
+
+        if(city.twoWeather.includes('clouds')){
+            secondIcon.innerText = "cloud";
+        }else if(city.twoWeather.includes('clear')){
+            secondIcon.innerText = "sunny";
+        }else if(city.twoWeather.includes('rain')){
+            secondIcon.innerText = "rainy";
+        }else if(city.twoWeather.includes('drizzle')){
+            secondIcon.innerText = "rainy";
+        }else if(city.twoWeather.includes('snow')){
+            secondIcon.innerText = "weather_snowy";
+        }
+
+        if(city.threeWeather.includes('clouds')){
+            thirdIcon.innerText = "cloud";
+        }else if(city.threeWeather.includes('clear')){
+            thirdIcon.innerText = "sunny";
+        }else if(city.threeWeather.includes('rain')){
+            thirdIcon.innerText = "rainy";
+        }else if(city.threeWeather.includes('drizzle')){
+            thirdIcon.innerText = "rainy";
+        }else if(city.threeWeather.includes('snow')){
+            thirdIcon.innerText = "weather_snowy";
+        }
+
+        if(city.fourWeather.includes('clouds')){
+            fourthIcon.innerText = "cloud";
+        }else if(city.fourWeather.includes('clear')){
+            fourthIcon.innerText = "sunny";
+        }else if(city.fourWeather.includes('rain')){
+            fourthIcon.innerText = "rainy";
+        }else if(city.fourWeather.includes('drizzle')){
+            fourthIcon.innerText = "rainy";
+        }else if(city.fourWeather.includes('snow')){
+            fourthIcon.innerText = "weather_snowy";
+        }
+
+        if(city.fiveWeather.includes('clouds')){
+            fifthIcon.innerText = "cloud";
+        }else if(city.fiveWeather.includes('clear')){
+            fifthIcon.innerText = "sunny";
+        }else if(city.fiveWeather.includes('rain')){
+            fifthIcon.innerText = "rainy";
+        }else if(city.fiveWeather.includes('drizzle')){
+            fifthIcon.innerText = "rainy";
+        }else if(city.fiveWeather.includes('snow')){
+            fifthIcon.innerText = "weather_snowy";
+        }
     })
 }
 
