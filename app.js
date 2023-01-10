@@ -1,4 +1,6 @@
 // SELECTORS
+const backgroundImg = document.getElementById('background');
+
 const searchBar = document.getElementById('search-bar');
 const searchBtn = document.getElementById('search-btn');
 const celsiusBtn = document.getElementById('celsius');
@@ -103,14 +105,18 @@ function updateCity(city){
 
         if(weatherDescription.includes('clouds')){
             weatherIcon.innerText = "cloud";
+            backgroundImg.src = "https://facumeniy.github.io/weather-app/images/cloudy-landscape.jpg";
         }else if(weatherDescription.includes('clear')){
             weatherIcon.innerText = "sunny";
+            backgroundImg.src = "https://facumeniy.github.io/weather-app/images/landscape.jpg";
         }else if(weatherDescription.includes('rain')){
             weatherIcon.innerText = "rainy";
+            backgroundImg.src = "https://facumeniy.github.io/weather-app/images/rainy-landscape.jpg";
         }else if(weatherDescription.includes('drizzle')){
             weatherIcon.innerText = "rainy";
+            backgroundImg.src = "https://facumeniy.github.io/weather-app/images/rainy-landscape.jpg";
         }else if(weatherDescription.includes('snow')){
-            weatherIcon.innerText = "weather_snowy";
+            weatherIcon.innerText = "https://facumeniy.github.io/weather-app/images/snowy-landscape.jpg";
         }
 
         let nextDay = (new Date().getDay() + 1);
