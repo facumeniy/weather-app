@@ -253,10 +253,10 @@ tempSelect.style.display = "block";
 // EVENT LISTENERS
 searchBtn.addEventListener('click', () => {
     currentCity = getCityInfo(searchBar.value);
-    const newForecast = getCityForecast(searchBar.value);
+    cityForecast = getCityForecast(searchBar.value);
 
     updateCity(currentCity);
-    updateForecast(newForecast);
+    updateForecast(cityForecast);
 });
 
 celsiusBtn.addEventListener('click', () => {
@@ -265,6 +265,13 @@ celsiusBtn.addEventListener('click', () => {
         feelksLike.innerText = city.feelsLikeCel;
         windSpeed.innerText = city.windSpeedKmh;
     })
+    cityForecast.then(city => {
+        firstTemp.innerText = city.oneCel;
+        secondTemp.innerText = city.twoCel;
+        thirdTemp.innerText = city.threeCel;
+        fourthTemp.innerText = city.fourCel;
+        fifthTemp.innerText = city.fiveCel;
+    });
 })
 
 fahrBtn.addEventListener('click', () => {
@@ -272,7 +279,14 @@ fahrBtn.addEventListener('click', () => {
         cityTemp.innerText = city.fahrenheitTemp;
         feelksLike.innerText = city.feelsLikeFahr;
         windSpeed.innerText = city.windSpeedMph;
-    })
+    });
+    cityForecast.then(city => {
+        firstTemp.innerText = city.oneFahr;
+        secondTemp.innerText = city.twoFahr;
+        thirdTemp.innerText = city.threeFahr;
+        fourthTemp.innerText = city.fourFahr;
+        fifthTemp.innerText = city.fiveFahr;
+    });
 })
 
 
