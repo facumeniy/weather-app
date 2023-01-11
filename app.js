@@ -279,7 +279,7 @@ celsiusBtn.addEventListener('click', () => {
         fourthTemp.innerText = city.fourCel;
         fifthTemp.innerText = city.fiveCel;
     });
-})
+});
 
 fahrBtn.addEventListener('click', () => {
     currentCity.then(city => {
@@ -294,7 +294,13 @@ fahrBtn.addEventListener('click', () => {
         fourthTemp.innerText = city.fourFahr;
         fifthTemp.innerText = city.fiveFahr;
     });
-})
+});
+
+window.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        searchBtn.click();
+    }
+});
 
 
 

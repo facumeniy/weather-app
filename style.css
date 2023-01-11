@@ -28,7 +28,7 @@ body{
     height: 100%;
     position: absolute;
     object-fit: cover;
-    filter: brightness(55%);
+    filter: brightness(50%);
     z-index: -999;
 }
 #content{
@@ -119,6 +119,7 @@ body{
     margin-top: 20px;
     height: 100%;
     width: 100%;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -253,6 +254,9 @@ body{
     background-color: #00000000;
     border: none;
     width: 100%;
+}
+#search-bar::placeholder{
+    color: white;
 }
 #search-bar:focus{
     outline: none;
