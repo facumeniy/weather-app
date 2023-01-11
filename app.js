@@ -109,10 +109,7 @@ function updateCity(city){
         }else if(weatherDescription.includes('clear')){
             weatherIcon.innerText = "sunny";
             backgroundImg.src = "https://facumeniy.github.io/weather-app/images/landscape.jpg";
-        }else if(weatherDescription.includes('rain')){
-            weatherIcon.innerText = "rainy";
-            backgroundImg.src = "https://facumeniy.github.io/weather-app/images/rainy-landscape.jpg";
-        }else if(weatherDescription.includes('drizzle')){
+        }else if(weatherDescription.includes('rain') || weatherDescription.includes('drizzle')){
             weatherIcon.innerText = "rainy";
             backgroundImg.src = "https://facumeniy.github.io/weather-app/images/rainy-landscape.jpg";
         }else if(weatherDescription.includes('snow')){
@@ -120,7 +117,7 @@ function updateCity(city){
             backgroundImg.src = "https://facumeniy.github.io/weather-app/images/snowy-landscape.jpg";
         }else if(weatherDescription.includes('mist')){
             weatherIcon.innerText = "cloud";
-            backgroundImg.src = "https://facumeniy.github.io/weather-app/images/misty-landscape.jpg";
+            backgroundImg.src = "https://facumeniy.github.io/weather-app/images/mist.jpg";
         }
 
         let nextDay = (new Date().getDay() + 1);
@@ -149,7 +146,7 @@ function updateCity(city){
         const timezoneOffset = city.timezone;
         const currentTime = new Date();
         let currentHour = ((currentTime.getHours() + timezoneOffset / 60 / 60) + 3);
-        if(currentHour > 24){
+        if(currentHour >= 24){
             currentHour = `0${currentHour - 24}`;
             dayOfMonth++;
             day++;

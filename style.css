@@ -28,7 +28,7 @@ body{
     height: 100%;
     position: absolute;
     object-fit: cover;
-    filter: brightness(50%);
+    filter: brightness(55%);
     z-index: -999;
 }
 #content{
